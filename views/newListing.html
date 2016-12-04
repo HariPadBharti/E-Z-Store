@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Storage App</title>
+    <meta charset="utf-8" />
+    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <script src="cordova.js"></script>
+    <script src="kendo/js/jquery.min.js"></script>
+    <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/details.js"></script>
+    <script src="js/favorites.js"></script>
+</head>
+
+<body>
+<div data-role="view" id="addListing" data-title="Add Listing" data-model="loginView">
+    <form>
+        <ul data-role="listview" data-style="inset">
+            <li> <label>
+                  Select Type:
+                  <br/>
+                  <select dir="rtl" name="storageType">
+                    <option value="garage">Garage</option>
+                    <option value="basement">Basement</option>
+                    <option value="shed">Shed</option>
+                </select>
+              </label> </li>
+                        <li> <label>
+                  Indoor/Outdoor:
+                  <br/>
+                  <select dir="rtl" name="indoorOrOutdoor">
+                    <option value="garage">Indoor</option>
+                    <option value="basement">Outdoor</option>
+                </select>
+              </label> </li>
+               <li> <label>
+                  Climate Control:
+                  <br/>
+                  <select dir="rtl" name="indoorOrOutdoor">
+                    <option value="garage">Yes</option>
+                    <option value="basement">No</option>
+                </select>
+              </label> </li>
+               <li> <label>
+                  Accessibility:
+                  <br/>
+                  <select dir="rtl" name="indoorOrOutdoor">
+                    <option value="garage">Upon Request</option>
+                    <option value="basement">Anytime</option>
+                </select>
+              </label> </li>
+              <li> <label>
+                  Address:
+                    <br/>
+                    <input type="text" name="address">
+              </label> </li>
+               <li> <label>
+                  Price:
+                    <br/>
+                    <input type="text" name="address">
+              </label> </li>
+              <li> <label>
+                  Photo:
+                <input type="file">
+              </label> </li>
+              </ul>
+            <center><a href="views/thanks.html" data-role="button">Add Listing</a></center>
+        
+    </form>
+</div>
+
+</body>
+</html>

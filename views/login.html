@@ -1,0 +1,40 @@
+<script>
+
+    window.loginView = kendo.observable({
+        submit: function () {
+            if (!this.username) {
+                navigator.notification.alert("Username is required.");
+                return;
+            }
+            if (!this.password) {
+                navigator.notification.alert("Password is required.");
+                return;
+            }
+            if(this.username==="tcooper"&&this.password==="t"){
+                window.location.href = 'index2.html';
+                return;
+            }else{
+                navigator.notification.alert("Invalid Username or Password");
+                return;
+            }
+        }
+    });
+
+</script>
+<div data-role="view" id="login" data-title="Login" data-model="loginView">
+    <form>
+        <ul data-role="listview" data-style="inset">
+            <li> <label>
+                  Username:
+                  <input type="text" name="username" data-bind="value: username">
+              </label> </li>
+            <li> <label>
+                  Password:
+                  <input type="password" name="password" data-bind="value: password">
+              </label> </li>
+            </ul>
+            <br/>
+            <center> <button style="width: 90%" data-role="button" data-bind="click: submit">Login</button> </center>
+        <br/>
+    </form>
+</div>

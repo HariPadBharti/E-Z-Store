@@ -1,0 +1,10 @@
+<div data-role="view" data-title="Space Details" data-show="StorageDetail.show" data-hide="StorageDetail.hide" data-layout="back-layout"
+    data-reload="true">
+    <div id="storageContent">
+        <div class="title" data-bind="text: title"></div>
+        <div class="bigImage"> <img data-bind="attr: { src: image_url }" width="90%" /> </div>
+        <div> <label for="favorite">Favorite?</label> <input id="favorite" type="checkbox" data-role="switch" data-checked=false
+                data-change="StorageDetail.setIsFavorite" /> </div>
+        <div> <a href="views/book.html" data-role="button">Book Space</a> </div>
+    </div>
+</div>

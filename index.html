@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Storage App</title>
+    <meta charset="utf-8" />
+    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <script src="cordova.js"></script>
+    <script src="kendo/js/jquery.min.js"></script>
+    <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/details.js"></script>
+    <script src="js/favorites.js"></script>
+</head>
+
+<body>
+    <div data-role="view" id="index" data-title="Available">
+        <ul data-role="listview" data-source="Spaces.data" data-template="spaces-template"></ul>
+    </div>
+    <script type="text/x-kendo-template" id="spaces-template">
+        <a href="views/login.html">
+            <div class="storageImage"><img src="#: image_url #" /></div>
+            <div class="storageTitle">#: name #</div>
+            <div class="nearbyUniversity">#: university #</div>
+        </a>
+    </script>
+    <div data-role="layout" data-id="main-layout">
+        <div data-role="header">
+            <div data-role="navbar"> <span data-role="view-title"></span>
+                <a href="views/settings.html" data-role="button" data-align="right" data-icon="settings"></a> <a href="views/login.html" data-role="button" data-align="left">Login</a> </div>
+        </div>
+        <div data-role="footer">
+            <div data-role="tabstrip"> <a href="#index" data-icon="home">Home</a>
+                <a href="views/about.html" data-icon="globe">About</a><a href="views/faq.html" data-icon="info">FAQ</a>
+            </div>
+        </div>
+    </div>
+    <div data-role="layout" data-id="back-layout">
+        <div data-role="header">
+            <div data-role="navbar"> <a data-click="Spaces.back" data-role="button" data-align="left" data-icon="rewind">Back</a> <span data-role="view-title"></span>                </div>
+        </div>
+    </div>
+</body>
+
+</html>
